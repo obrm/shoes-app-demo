@@ -39,7 +39,7 @@ html {
   font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;
-  color: white;
+  color: #fff;
   transition: border-color 0.25s;
 }
 .btn:hover {
@@ -81,17 +81,20 @@ html {
 }
 .nav-links a {
   font-weight: 500;
-  color: var(--primary-color);
+  color: var(--secondary-color);
   font-size: 2rem;
   padding: 2.8rem 1rem;
 }
 
 .nav-links a:hover {
   background-color: var(--primary-color);
-  color: white;
+  color: #fff;
 }
 .nav-links a.active{
-  color: var(--secondary-color);
+  color: var(--primary-color);
+}
+.nav-links a.active:hover{
+  color: #fff;
 }
 .user-name{
   font-weight: 500;

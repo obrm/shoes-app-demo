@@ -1,7 +1,38 @@
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router';
 
-const useForm = (shoe, setShoe, setErrors, apiFunction) => {
+import { getShoe } from '../api/api';
+import { useGlobalShoeContext } from './useGlobalShoeContext';
+
+const useForm = (shoeId) => {
     const navigate = useNavigate();
+
+    const [shoe, setShoe] = useState({
+        name: '',
+        brand: '',
+        image: '',
+        price: '',
+    });
+    const [errors, setErrors] = useState({
+        name: null,
+        brand: null,
+        image: null,
+        price: null
+    });
+
+    useEffect(() => {
+        if (shoeId) {
+            const fetchShoe = async () => {
+                const shoeData = await getShoe(shoeId);
+                setShoe(shoeData);
+            };
+
+            fetchShoe();
+        }
+    }, [shoeId]);
+
+    const { addNewShoe, editShoe } = useGlobalShoeContext()
+
     const handleChange = (e) => {
         setShoe({
             ...shoe,
@@ -53,14 +84,18 @@ const useForm = (shoe, setShoe, setErrors, apiFunction) => {
 
         setErrors(newErrors);
 
-        if (isValid) {
-            apiFunction(shoe, shoe.id);
+        if (isValid) {     
+            if (shoeId) {
+                editShoe(shoe);
+            } else {
+                addNewShoe(shoe);
+            }
             navigate('/');
         }
     };
 
 
-    return { handleChange, handleSubmit };
+    return { handleChange, handleSubmit, shoe, errors };
 };
 
 export default useForm;

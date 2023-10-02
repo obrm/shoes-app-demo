@@ -3,9 +3,9 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import {
   LogIn,
   Home,
-  AddProduct,
-  Product,
-  EditProduct,
+  AddShoe,
+  Shoe,
+  EditShoe,
   Delete,
   NotFound
 } from './pages';
@@ -23,7 +23,7 @@ const routes = [
       },
       {
         path: 'add',
-        element: <ProtectedRoute><AddProduct /> </ProtectedRoute>,
+        element: <ProtectedRoute><AddShoe /> </ProtectedRoute>,
       },
       {
         path: 'logIn',
@@ -34,11 +34,11 @@ const routes = [
         children: [
           {
             path: ':shoeId',
-            element: <Product />
+            element: <Shoe />
           },
           {
             path: ':shoeId/edit',
-            element: <ProtectedRoute> <EditProduct /></ProtectedRoute>
+            element: <ProtectedRoute> <EditShoe /></ProtectedRoute>
           }
         ]
       },

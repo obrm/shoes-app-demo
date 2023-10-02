@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { useGlobalContext } from "../hooks/useGlobalContext";
 import { useNavigate } from 'react-router';
+
+import { useGlobalAuthContext } from "../hooks";
 
 const useLogin = () => {
   const navigate = useNavigate();
 
-  const { login } = useGlobalContext();
+  const { login } = useGlobalAuthContext();
 
   const [formData, setFormData] = useState({
     name: "",

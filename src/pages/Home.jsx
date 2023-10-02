@@ -1,20 +1,12 @@
-import { useEffect, useState } from 'react'
-import { getAllShoes } from '../api/api';
 import { Link } from 'react-router-dom';
 
+import { useGlobalShoeContext } from '../hooks';
+
 const Home = () => {
-    const [apiData, setApiData] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
-
-    const fetchShoes = async () => {
-        const shoesData = await getAllShoes();
-        setApiData(shoesData);
-        setIsLoading(false);
-    }
-
-    useEffect(() => {
-        fetchShoes();
-    }, []);
+    const {
+        shoes,
+        isLoading,
+    } = useGlobalShoeContext();
 
     if (isLoading) {
         return <div className='loading'>Loading...</div>
@@ -22,7 +14,7 @@ const Home = () => {
 
     return (
         <section className='shoes-container'>
-            {apiData.map(shoe => {
+            {shoes && shoes.map(shoe => {
                 return (
                     <div key={shoe.id} className='shoe-container'>
                         <h3 className='shoe-name'>

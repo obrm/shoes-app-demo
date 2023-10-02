@@ -1,9 +1,10 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useGlobalContext } from '../hooks/useGlobalContext';
+
+import { useGlobalAuthContext } from '../hooks';
 
 const ProtectedRoute = ({ children }) => {
-  const { user } = useGlobalContext();
+  const { user } = useGlobalAuthContext();
 
   const navigate = useNavigate();
 

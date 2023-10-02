@@ -1,9 +1,10 @@
 import { Outlet } from "react-router"
 import { NavLink, Link } from "react-router-dom"
-import { useGlobalContext } from "../hooks/useGlobalContext";
+
+import { useGlobalAuthContext } from "../hooks";
 
 const SharedLayout = () => {
-    const { user, logout } = useGlobalContext();
+    const { user, logout } = useGlobalAuthContext();
 
     return (
         <>
@@ -23,7 +24,7 @@ const SharedLayout = () => {
                                 <NavLink
                                     to='/add'
                                     className={({ isActive }) => isActive ? 'active' : undefined}>
-                                    Add Product
+                                    Add Shoe
                                 </NavLink>}
                         </li>
                     </ul>

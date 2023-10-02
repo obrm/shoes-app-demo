@@ -1,31 +1,34 @@
-import { useEffect, useState } from 'react'
-import { useNavigate, useParams } from 'react-router'
-import { getShoe, onDelete } from '../api/api';
+import { useEffect, useState } from 'react';
+import { useNavigate, useParams } from 'react-router';
 import { Link } from 'react-router-dom';
-import { useGlobalContext } from "../hooks/useGlobalContext";
+
+import { getShoe, deleteShoe } from '../api/api';
+
+import { useGlobalAuthContext, useGlobalShoeContext } from "../hooks";
 
 
-const Product = () => {
+const Shoe = () => {
     const { shoeId } = useParams();
     const navigate = useNavigate();
 
     const [shoe, setShoe] = useState({});
-    const { user } = useGlobalContext();
+    const { user } = useGlobalAuthContext();
+    const { removeShoe } = useGlobalShoeContext();
 
-    
+
     useEffect(() => {
         const fetchShoe = async () => {
             const shoeData = await getShoe(shoeId);
             setShoe(shoeData);
-        }
+        };
 
         fetchShoe();
     }, [shoeId]);
 
     const handleDelete = () => {
-        onDelete(shoe.id);
+        removeShoe(shoe.id);
         navigate('/delete');
-    }
+    };
 
     return (
         <main className='single-shoe-container'>
@@ -46,9 +49,9 @@ const Product = () => {
             </div>
         </main>
 
-    )
+    );
 
 
-}
+};
 
-export default Product
+export default Shoe;

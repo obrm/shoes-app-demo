@@ -1,37 +1,32 @@
-import axios from "axios";
+import axios from 'axios';
 
-const BASE_URL = "https://6508868856db83a34d9c779e.mockapi.io/shoes";
+const BASE_URL = 'https://6508868856db83a34d9c779e.mockapi.io/shoes';
+
+const request = async (method, endpoint, data = null) => {
+    const res = await axios({
+        method,
+        url: `${BASE_URL}${endpoint}`,
+        data,
+    });
+    return res.data;
+};
 
 export const getAllShoes = async () => {
-    try {
-        const res = await axios.get(
-            BASE_URL
-        );
-        return res.data;
-    } catch (error) {
-        console.log(error);
-    }
-}
+    return await request('get', '/');
+};
 
 export const getShoe = async (shoeId) => {
-    try {
-        const res = await axios.get(
-            `${BASE_URL}/${shoeId}`
-        );
-        return res.data;
-    } catch (error) {
-        console.log(error);
-    }
-}
+    return await request('get', `/${shoeId}`);
+};
 
-export const updateAPIData = (shoe, shoeId) => {
-    axios.put(`${BASE_URL}/${shoeId}`, shoe);
-}
+export const updateShoe = async (shoe, shoeId) => {
+    return await request('put', `/${shoeId}`, shoe);
+};
 
-export const postData = (shoe) => {
-    axios.post(BASE_URL, shoe);
-}
+export const addShoe = async (shoe) => {
+    return await request('post', '/', shoe);
+};
 
-export const onDelete = (shoeId) => {
-    axios.delete(`${BASE_URL}/${shoeId}`);
-}
+export const deleteShoe = async (shoeId) => {
+    return await request('delete', `/${shoeId}`);
+};

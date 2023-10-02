@@ -2,6 +2,6 @@ import { useContext } from "react";
 
 import { AuthContext } from '../context/AuthContext';
 
-export const useGlobalContext = () => {
+export const useGlobalAuthContext = () => {
     return useContext(AuthContext);
 };
