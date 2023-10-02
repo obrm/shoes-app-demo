@@ -1,6 +1,36 @@
-import Input from './Input';
+import { useEffect, useState } from 'react';
 
-const Form = ({ handleChange, handleSubmit, shoe, errors, btnText }) => {
+import useForm from '../hooks/useForm';
+
+import Input from './Input';
+import { getShoe } from '../api/api';
+
+const Form = ({ shoeId, btnText, apiMethod }) => {
+    const [shoe, setShoe] = useState({
+        name: '',
+        brand: '',
+        image: '',
+        price: '',
+    });
+    const [errors, setErrors] = useState({
+        name: null,
+        brand: null,
+        image: null,
+        price: null
+    });
+
+    useEffect(() => {
+        if (shoeId) {
+            const fetchShoe = async () => {
+                const shoeData = await getShoe(shoeId);
+                setShoe(shoeData);
+            };
+
+            fetchShoe();
+        }
+    }, [shoeId]);
+
+    const { handleChange, handleSubmit } = useForm(shoe, setShoe, setErrors, apiMethod);
 
     const fields = [
         {
