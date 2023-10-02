@@ -1,10 +1,11 @@
 import axios from "axios";
 
+const BASE_URL = "https://6508868856db83a34d9c779e.mockapi.io/shoes";
 
 export const getAllShoes = async () => {
     try {
         const res = await axios.get(
-            "https://6508868856db83a34d9c779e.mockapi.io/shoes"
+            BASE_URL
         );
         return res.data;
     } catch (error) {
@@ -15,7 +16,7 @@ export const getAllShoes = async () => {
 export const getShoe = async (shoeId) => {
     try {
         const res = await axios.get(
-            `https://6508868856db83a34d9c779e.mockapi.io/shoes/${shoeId}`
+            `${BASE_URL}/${shoeId}`
         );
         return res.data;
     } catch (error) {
@@ -24,13 +25,13 @@ export const getShoe = async (shoeId) => {
 }
 
 export const updateAPIData = (shoe, shoeId) => {
-    axios.put(`https://6508868856db83a34d9c779e.mockapi.io/shoes/${shoeId}`, shoe)
+    axios.put(`${BASE_URL}/${shoeId}`, shoe);
 }
 
 export const postData = (shoe) => {
-    axios.post(`https://6508868856db83a34d9c779e.mockapi.io/shoes`, shoe)
+    axios.post(BASE_URL, shoe);
 }
 
 export const onDelete = (shoeId) => {
-    axios.delete(`https://6508868856db83a34d9c779e.mockapi.io/shoes/${shoeId}`)
+    axios.delete(`${BASE_URL}/${shoeId}`);
 }
