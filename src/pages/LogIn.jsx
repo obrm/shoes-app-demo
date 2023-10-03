@@ -30,7 +30,7 @@ const LogIn = () => {
     ];
 
     return (
-        <section className="single-shoe-container">
+        <section className="single-column-container">
             <h2>Log In</h2>
             <form onSubmit={handleSubmit}>
                 {fields.map(field => (

@@ -12,7 +12,7 @@ const ManageShoe = () => {
     const { title, btnText } = details;
 
     return (
-        <div className="single-shoe-container">
+        <div className="single-column-container">
             <h2>{title}</h2>
             <ShoeForm shoeId={shoeId} btnText={btnText} />
         </div>

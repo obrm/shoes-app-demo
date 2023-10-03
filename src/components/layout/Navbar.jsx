@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useGlobalAuthContext } from "../hooks";
+import { useGlobalAuthContext } from "../../hooks";
 
 import NavListItem from './NavListItem';
 

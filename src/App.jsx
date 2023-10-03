@@ -45,13 +45,13 @@ const routes = [
             element: <ProtectedRoute> <ManageShoe /></ProtectedRoute>
           }
         ]
+      },
+      {
+        path: '*',
+        element: <NotFound />
       }
     ]
   },
-  {
-    path: '*',
-    element: <NotFound />
-  }
 ];
 
 function App() {

@@ -1,9 +1,9 @@
 import ShoeCard from './ShoeCard';
-import ShoeForm from './ShoeForm';
-import Input from './Input';
+import ShoeForm from './Form/ShoeForm';
+import Input from './Form/Input';
 import ProtectedRoute from './ProtectedRoute';
-import SharedLayout from './SharedLayout';
-import Navbar from './Navbar';
-import NavListItem from './NavListItem';
+import SharedLayout from './layout/SharedLayout';
+import Navbar from './layout/Navbar';
+import NavListItem from './layout/NavListItem';
 
 export { Navbar, NavListItem, ShoeCard, ShoeForm, Input, ProtectedRoute, SharedLayout };

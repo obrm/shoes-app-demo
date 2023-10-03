@@ -1,6 +1,8 @@
-import { useShoeForm } from '../hooks';
+import { useShoeForm } from '../../hooks';
 
 import Input from './Input';
+
+import './style.css';
 
 const ShoeForm = ({ shoeId, btnText }) => {
     const { shoe, errors, handleChange, handleSubmit } = useShoeForm(shoeId);

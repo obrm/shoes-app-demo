@@ -10,7 +10,7 @@ const Shoe = () => {
     const { shoe, handleDelete } = useShoe();
 
     return (
-        <main className='single-shoe-container'>
+        <main className='single-column-container'>
             <div className='shoe-container'>
                 <h3 className='shoe-name'>
                     {shoe.name}

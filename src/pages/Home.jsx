@@ -2,6 +2,8 @@ import { useGlobalShoeContext } from '../hooks';
 
 import { ShoeCard } from '../components';
 
+import './style/Home.css'
+
 const Home = () => {
     const {
         shoes,
