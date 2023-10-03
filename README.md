@@ -57,7 +57,7 @@ This is a Shoe CRUD application that allows users to Create, Read, Update, and D
 1. Clone the repository from `https://github.com/obrm/shoes-app-demo`.
 2. Install dependencies with `npm install`.
 3. Add the `.env` file based on the `.env.sample` file included in the repository.
-4. Run the application using `npm start`.
+4. Run the application using `npm run dev`.
 
 
 
