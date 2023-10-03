@@ -6,7 +6,7 @@ const ManageShoe = () => {
 
     const details = {
         title: shoeId ? 'Edit Shoe' : 'Add Shoe',
-        btnText: shoeId ? 'Update' : 'Update',
+        btnText: shoeId ? 'Update Shoe' : 'Add',
     };
 
     const { title, btnText } = details;
