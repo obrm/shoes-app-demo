@@ -36,7 +36,7 @@ const LogIn = () => {
                 {fields.map(field => (
                     <Input key={field.id} {...field} handleChange={handleChange} />
                 ))}
-                <p className="login-info">for admin permissions enter user name &apos;admin&apos; and any password</p>
+                <p className="login-info">for admin permissions please contact me via <a href="mailto:obrm770@gmail.com">email</a>.</p>
                 <button className="btn update-btn" type="submit">Log In</button>
             </form>
         </section>

@@ -9,9 +9,10 @@ const userFromLocalStorage = localStorage.getItem('userData')
 export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(userFromLocalStorage);
 
-    const login = (name) => {
+    const login = (formData) => {
+        const { name, password } = formData;
         let isAdmin = false;
-        if (name === 'admin') {
+        if (name === 'admin' && password === import.meta.env.VITE_ADMIN_PASSWORD) {
             isAdmin = true;
         }
         const userData = { name, isAdmin };

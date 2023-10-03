@@ -50,7 +50,7 @@ const useLogin = () => {
     setErrors(newErrors);
 
     if (isValid) {
-      login(formData.name);
+      login(formData);
       navigate('/');
     }
   };
