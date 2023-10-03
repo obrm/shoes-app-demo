@@ -60,6 +60,7 @@ Visit the [live demo](https://obrm-shoe-app-demo.netlify.app).
 
 - React.js
 - React Router
+- Axios
 - mockApi
 - react-toastify
 
