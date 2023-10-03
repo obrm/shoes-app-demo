@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router';
+import { toast } from 'react-toastify';
 
 import { getShoe } from '../api/api';
 
@@ -27,7 +28,18 @@ const useShoe = () => {
 
   const handleDelete = () => {
     removeShoe(shoeId);
-    navigate('/delete');
+
+    toast.success('Shoe deleted successfully', {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: false,
+      progress: undefined,
+    });
+
+    navigate('/');
   };
 
   return { user, shoe, handleDelete };

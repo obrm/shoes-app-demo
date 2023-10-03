@@ -10,7 +10,6 @@ import {
   Home,
   Shoe,
   ManageShoe,
-  Delete,
   NotFound
 } from './pages';
 
@@ -45,11 +44,7 @@ const routes = [
             element: <ProtectedRoute> <ManageShoe /></ProtectedRoute>
           }
         ]
-      },
-      {
-        path: 'delete',
-        element: <ProtectedRoute> <Delete /></ProtectedRoute>,
-      },
+      }
     ]
   },
   {
