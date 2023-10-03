@@ -2,7 +2,7 @@ import { useShoeForm } from '../hooks';
 
 import Input from './Input';
 
-const Form = ({ shoeId, btnText }) => {
+const ShoeForm = ({ shoeId, btnText }) => {
     const { shoe, errors, handleChange, handleSubmit } = useShoeForm(shoeId);
 
     const fields = [
@@ -50,4 +50,4 @@ const Form = ({ shoeId, btnText }) => {
     );
 };
 
-export default Form;
+export default ShoeForm;

@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
+
 import 'react-toastify/dist/ReactToastify.css';
 
 import { useGlobalShoeContext } from './hooks';
