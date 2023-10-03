@@ -1,7 +1,3 @@
-import { useState } from 'react';
-
-import { addShoe } from '../api/api';
-
 import { Form } from '../components';
 
 const AddShoe = () => {

@@ -8,28 +8,32 @@ const Form = ({ shoeId, btnText }) => {
     const fields = [
         {
             id: 1,
-            name: 'name',
+            name: 'Name',
+            inputName: 'name',
             value: shoe.name,
             type: 'text',
             error: errors.name
         },
         {
             id: 2,
-            name: 'brand',
+            name: 'Brand',
+            inputName: 'brand',
             value: shoe.brand,
             type: 'text',
             error: errors.brand
         },
         {
             id: 3,
-            name: 'image',
+            name: 'Image',
+            inputName: 'image',
             value: shoe.image,
             type: 'text',
             error: errors.image
         },
         {
             id: 4,
-            name: 'price',
+            name: 'Price',
+            inputName: 'price',
             value: shoe.price,
             type: 'text',
             error: errors.price

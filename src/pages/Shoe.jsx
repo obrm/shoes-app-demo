@@ -5,31 +5,11 @@ import { Link } from 'react-router-dom';
 import { getShoe } from '../api/api';
 
 import { useGlobalAuthContext, useGlobalShoeContext } from "../hooks";
+import { useShoe } from '../hooks';
 
 
 const Shoe = () => {
-    const { shoeId } = useParams();
-    const navigate = useNavigate();
-
-    const [shoe, setShoe] = useState({});
-
-    const { user } = useGlobalAuthContext();
-    const { removeShoe } = useGlobalShoeContext();
-
-
-    useEffect(() => {
-        const fetchShoe = async () => {
-            const shoeData = await getShoe(shoeId);
-            setShoe(shoeData);
-        };
-
-        fetchShoe();
-    }, [shoeId]);
-
-    const handleDelete = () => {
-        removeShoe(shoe.id);
-        navigate('/delete');
-    };
+    const { user, shoe, handleDelete } = useShoe();
 
     return (
         <main className='single-shoe-container'>
