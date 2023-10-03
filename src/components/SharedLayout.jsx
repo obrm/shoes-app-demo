@@ -1,5 +1,5 @@
-import { Outlet } from "react-router"
-import { NavLink, Link } from "react-router-dom"
+import { Outlet } from "react-router";
+import { NavLink, Link } from "react-router-dom";
 
 import { useGlobalAuthContext } from "../hooks";
 
@@ -10,7 +10,10 @@ const SharedLayout = () => {
         <>
             <div className="container">
                 <nav className="navbar">
-                    <h1 className="logo">naalaim</h1>
+                    <Link
+                        to='/'>
+                        <h1 className="logo">naalaim</h1>
+                    </Link>
                     <ul className="nav-links">
                         <li>
                             <NavLink
@@ -56,7 +59,7 @@ const SharedLayout = () => {
             </div>
 
         </>
-    )
-}
+    );
+};
 
-export default SharedLayout
+export default SharedLayout;

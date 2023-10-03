@@ -7,6 +7,12 @@
   - [Overview](#overview)
   - [Features](#features)
   - [Tech Stack](#tech-stack)
+  - [Screenshots](#screenshots)
+    - [Home Screen](#home-screen)
+    - [Login Screen](#login-screen)
+    - [Shoe Screen](#shoe-screen)
+    - [Edit Shoe Screen](#edit-shoe-screen)
+    - [Error Toast](#error-toast)
   - [Getting Started](#getting-started)
   - [API Integration](#api-integration)
     - [Environment Variable Protection](#environment-variable-protection)
@@ -50,8 +56,33 @@ This is a Shoe CRUD application that allows users to Create, Read, Update, and D
 - mockApi
 - react-toastify
 
+---
+## Screenshots
 
+---
+### Home Screen
+![Home Screen](src/assets/home.png)
 
+---
+### Login Screen
+![Login Screen](src/assets/login.png)
+
+---
+
+### Shoe Screen
+![Shoe Screen](src/assets/shoe.png)
+
+---
+
+### Edit Shoe Screen
+![Manage Shoe Screen](src/assets/manage_shoe.png)
+
+---
+
+### Error Toast 
+![Error Toast](src/assets/error.png)
+
+---
 ## Getting Started
 
 1. Clone the repository from `https://github.com/obrm/shoes-app-demo`.
