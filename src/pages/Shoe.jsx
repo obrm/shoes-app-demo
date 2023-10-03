@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 
-import { getShoe, deleteShoe } from '../api/api';
+import { getShoe } from '../api/api';
 
 import { useGlobalAuthContext, useGlobalShoeContext } from "../hooks";
 
@@ -12,6 +12,7 @@ const Shoe = () => {
     const navigate = useNavigate();
 
     const [shoe, setShoe] = useState({});
+
     const { user } = useGlobalAuthContext();
     const { removeShoe } = useGlobalShoeContext();
 

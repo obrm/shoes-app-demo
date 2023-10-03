@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = 'https://6508868856db83a34d9c779e.mockapi.io/shoes';
+const BASE_URL = import.meta.env.VITE_BASE_URL;
 
 const request = async (method, endpoint, data = null) => {
     const res = await axios({
