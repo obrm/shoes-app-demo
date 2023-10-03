@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from 'react-router';
 
-import { useGlobalAuthContext } from "../hooks";
+import { useGlobalAuthContext } from ".";
 
 const useLogin = () => {
   const navigate = useNavigate();

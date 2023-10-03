@@ -1,4 +1,4 @@
-import { useLogin } from '../hooks';
+import { useLoginForm } from '../hooks';
 
 import { Input } from '../components';
 
@@ -8,7 +8,7 @@ const LogIn = () => {
         errors,
         handleChange,
         handleSubmit
-    } = useLogin()
+    } = useLoginForm()
 
     const fields = [
         {

@@ -6,6 +6,7 @@ import { useShoe } from '../hooks';
 
 const Shoe = () => {
     const { user } = useGlobalAuthContext();
+
     const { shoe, handleDelete } = useShoe();
 
     return (

@@ -1,9 +1,9 @@
-import { useForm } from '../hooks';
+import { useShoeForm } from '../hooks';
 
 import Input from './Input';
 
 const Form = ({ shoeId, btnText }) => {
-    const { shoe, errors, handleChange, handleSubmit } = useForm(shoeId);
+    const { shoe, errors, handleChange, handleSubmit } = useShoeForm(shoeId);
 
     const fields = [
         {
