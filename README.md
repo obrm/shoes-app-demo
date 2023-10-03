@@ -4,6 +4,7 @@
 
 - [Shoe CRUD App](#shoe-crud-app)
   - [Table of Contents](#table-of-contents)
+  - [Acknowledgments](#acknowledgments)
   - [Overview](#overview)
   - [Features](#features)
   - [Tech Stack](#tech-stack)
@@ -32,6 +33,9 @@
   - [License](#license)
 
 
+## Acknowledgments
+
+This project is based on the [React Shoe Shop](https://github.com/MariaPinchasi/react-shoe-shop) repository created by Maria Pinchasi. Many of the architectural decisions, UI elements, and functionalities were inspired by her work. Special thanks to Maria for providing a robust foundation upon which this application could be built. Please add a star to her work!
 
 ## Overview
 
@@ -56,7 +60,6 @@ This is a Shoe CRUD application that allows users to Create, Read, Update, and D
 - mockApi
 - react-toastify
 
----
 ## Screenshots
 
 ---
@@ -94,6 +97,7 @@ This is a Shoe CRUD application that allows users to Create, Read, Update, and D
 
 ## API Integration
 
+All the API calls are available in the `api.js` file in the `api` folder.
 ### Environment Variable Protection
 
 - The API URL is secured in an `.env` file, which is omitted from the repository for security reasons. Refer to `.env.sample` for the expected variables.
@@ -129,7 +133,7 @@ export const getAllShoes = async () => {
 
 ### Shoe Context
 
-- The global state is updated when a shoe is added, edited, or deleted. Ensures immediate reflection of changes across all components.
+- This global state is responsible for getting all the shoes and is updated when a shoe is added, edited, or deleted. Ensures immediate reflection of changes across all components.
 
 
 
@@ -161,12 +165,12 @@ export const getAllShoes = async () => {
 
 ## Code Reusability
 
-- A single `ManageShoe` component is used for both adding and editing shoes, depending on the presence of `shoeId` in the URL.
+- A single `ManageShoe` component is used for both adding and editing shoes, depending on the presence of `shoeId` in the URL, avoiding the need to use two separate components.
 
 
 ## Error Management
 
-- User-friendly error notifications are shown using the `react-toastify` package. It's centralized in the App component to handle errors application-wide.
+- User-friendly error notifications are shown using the [`react-toastify`](https://www.npmjs.com/package/react-toastify) package. It's centralized in the App component to handle errors application-wide.
 
 
 ## License
