@@ -1,15 +1,12 @@
-import { useEffect, useState } from 'react';
-import { useNavigate, useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 
-import { getShoe } from '../api/api';
-
-import { useGlobalAuthContext, useGlobalShoeContext } from "../hooks";
+import { useGlobalAuthContext } from "../hooks";
 import { useShoe } from '../hooks';
 
 
 const Shoe = () => {
-    const { user, shoe, handleDelete } = useShoe();
+    const { user } = useGlobalAuthContext();
+    const { shoe, handleDelete } = useShoe();
 
     return (
         <main className='single-shoe-container'>

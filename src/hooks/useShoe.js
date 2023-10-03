@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 
 import { getShoe } from '../api/api';
 
-import { useGlobalAuthContext, useGlobalShoeContext } from './';
+import { useGlobalShoeContext } from './';
 
 const useShoe = () => {
   const { shoeId } = useParams();
@@ -13,7 +13,6 @@ const useShoe = () => {
 
   const [shoe, setShoe] = useState({});
 
-  const { user } = useGlobalAuthContext();
   const { removeShoe } = useGlobalShoeContext();
 
 
@@ -42,6 +41,6 @@ const useShoe = () => {
     navigate('/');
   };
 
-  return { user, shoe, handleDelete };
+  return { shoe, handleDelete };
 };
 export default useShoe;
