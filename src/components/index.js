@@ -3,5 +3,7 @@ import ShoeForm from './ShoeForm';
 import Input from './Input';
 import ProtectedRoute from './ProtectedRoute';
 import SharedLayout from './SharedLayout';
+import Navbar from './Navbar';
+import NavListItem from './NavListItem';
 
-export { ShoeCard, ShoeForm, Input, ProtectedRoute, SharedLayout };
+export { Navbar, NavListItem, ShoeCard, ShoeForm, Input, ProtectedRoute, SharedLayout };
