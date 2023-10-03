@@ -36,8 +36,8 @@ This is a Shoe CRUD application that allows users to Create, Read, Update, and D
 ## Features
 
 - CRUD Operations
-- User Authentication
-- State Management
+- Mock User Authentication
+- Global State Management
 - Custom Hooks
 - Error Notifications
 
@@ -46,6 +46,7 @@ This is a Shoe CRUD application that allows users to Create, Read, Update, and D
 ## Tech Stack
 
 - React.js
+- React Router
 - mockApi
 - react-toastify
 
@@ -64,7 +65,7 @@ This is a Shoe CRUD application that allows users to Create, Read, Update, and D
 
 ### Environment Variable Protection
 
-- The API URL is secured in an `.env` file, which is included in this repository for example reasons. 
+- The API URL is secured in an `.env` file, which is omitted from the repository for security reasons. Refer to `.env.sample` for the expected variables.
 
 ### Request Management
 
