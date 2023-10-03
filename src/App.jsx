@@ -8,9 +8,8 @@ import { useGlobalShoeContext } from './hooks';
 import {
   LogIn,
   Home,
-  AddShoe,
   Shoe,
-  EditShoe,
+  ManageShoe,
   Delete,
   NotFound
 } from './pages';
@@ -28,7 +27,7 @@ const routes = [
       },
       {
         path: 'add',
-        element: <ProtectedRoute><AddShoe /> </ProtectedRoute>,
+        element: <ProtectedRoute><ManageShoe /> </ProtectedRoute>,
       },
       {
         path: 'logIn',
@@ -43,7 +42,7 @@ const routes = [
           },
           {
             path: ':shoeId/edit',
-            element: <ProtectedRoute> <EditShoe /></ProtectedRoute>
+            element: <ProtectedRoute> <ManageShoe /></ProtectedRoute>
           }
         ]
       },

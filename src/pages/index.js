@@ -1,17 +1,15 @@
 import Home from './Home';
-import AddShoe from './AddShoe';
 import Shoe from './Shoe';
-import EditShoe from './EditShoe';
 import NotFound from './NotFound';
 import Delete from './Delete';
 import LogIn from './LogIn';
+import ManageShoe from './ManageShoe';
 
 export {
     LogIn,
     Home,
-    AddShoe,
+    ManageShoe,
     Shoe,
-    EditShoe,
     NotFound,
     Delete
 }
