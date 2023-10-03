@@ -6,6 +6,7 @@
   - [Table of Contents](#table-of-contents)
   - [Acknowledgments](#acknowledgments)
   - [Overview](#overview)
+  - [Live Demo](#live-demo)
   - [Features](#features)
   - [Tech Stack](#tech-stack)
   - [Screenshots](#screenshots)
@@ -41,7 +42,9 @@ This project is based on the [React Shoe Shop](https://github.com/MariaPinchasi/
 
 This is a Shoe CRUD application that allows users to Create, Read, Update, and Delete shoe entries. The app is integrated with a mock API for demonstration purposes.
 
+## Live Demo
 
+Visit the [live demo](https://obrm-shoe-app-demo.netlify.app).
 
 ## Features
 
