@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router';
 import { getShoe } from '../api/api';
 import { useGlobalShoeContext } from './useGlobalShoeContext';
 
-const useForm = (shoeId) => {
+const useShoeForm = (shoeId) => {
     const navigate = useNavigate();
 
     const [shoe, setShoe] = useState({
@@ -98,4 +98,4 @@ const useForm = (shoeId) => {
     return { handleChange, handleSubmit, shoe, errors };
 };
 
-export default useForm;
+export default useShoeForm;

@@ -8,7 +8,7 @@ const LogIn = () => {
         errors,
         handleChange,
         handleSubmit
-    } = useLoginForm()
+    } = useLoginForm();
 
     const fields = [
         {

@@ -16,7 +16,6 @@ const SharedLayout = () => {
                     <p>All Rights Reserved 2023</p>
                 </footer>
             </div>
-
         </>
     );
 };
