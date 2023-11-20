@@ -23,7 +23,7 @@ export const ShoeProvider = ({ children }) => {
 
   useEffect(() => {
     fetchShoes();
-  }, []);
+  }, [shoes]);
 
   const addNewShoe = async (shoe) => {
     try {
