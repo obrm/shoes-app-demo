@@ -29,7 +29,7 @@ export const ShoeProvider = ({ children }) => {
     try {
       const newShoe = await addShoe(shoe);
       setShoes(prevShoes => ([...prevShoes, newShoe]));
-      showToast('Shoe added successfully');
+      toast.success('Shoe added successfully');
     } catch (err) {
       setError(err.message);
     }
@@ -41,7 +41,7 @@ export const ShoeProvider = ({ children }) => {
       setShoes((prevShoes) =>
         prevShoes.map((shoe) => (shoe.id === shoeData.id ? updatedShoe : shoe))
       );
-      showToast('Shoe updated successfully');
+      toast.success('Shoe updated successfully');
     } catch (err) {
       setError(err.message);
     }
@@ -53,7 +53,7 @@ export const ShoeProvider = ({ children }) => {
       setShoes((prevShoes) =>
         prevShoes.filter((shoe) => (shoe.id !== id))
       );
-      showToast('Shoe deleted successfully');
+      toast.success('Shoe deleted successfully');
     } catch (err) {
       setError(err.message);
     }
@@ -63,17 +63,6 @@ export const ShoeProvider = ({ children }) => {
     setError(null);
   };
 
-  const showToast = (message) => {
-    toast.success(message, {
-      position: "top-center",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: false,
-      progress: undefined,
-    });
-  }
   return (
     <ShoeContext.Provider
       value={{
